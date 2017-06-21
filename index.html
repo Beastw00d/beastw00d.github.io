@@ -1,45 +1,81 @@
 <html>
-    <head>
-        <title>Beastw00d Github Pages</title>
-        
-    </head>
-    <body>
 
-        <div id="dropin-container"></div>
-        <button id="submit-button" class="btn btn-success btn-block btn-lg" type="button">Pay $99</button>
+<head>
+    <title>Beastw00d Github Pages</title>
+    <meta charset="utf-8">
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
-        <script src="https://js.braintreegateway.com/web/dropin/1.3.1/js/dropin.min.js"></script>
-        <script>
-            var button = document.querySelector('#submit-button');
-            braintree.dropin.create({
-                authorization: 'sandbox_97b8q46m_4vs88bsqqw7xd2rh',
-                container: '#dropin-container',
-            }, function (createErr, instance) {
-                if (createErr) {
-                    // An error in the create call is likely due to
-                    // incorrect configuration values or network issues.
-                    // An appropriate error will be shown in the UI.
-                    console.error(createErr);
-                    return;
-                }
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+</head>
 
-                button.addEventListener('click', function () {
-                    instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
-                        if (requestPaymentMethodErr) {
-                            // No payment method is available.
-                            // An appropriate error will be shown in the UI.
-                            console.error('err:' + requestPaymentMethodErr);
-                            return;
-                        }
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.3.1/js/dropin.min.js"></script>
+    <a href="#braintree" class="btn btn-primary btn-sm" data-toggle="modal" data-dismiss="modal">
+        Pay Now
+    </a>
 
-                        // Submit payload.nonce to your server
-                        console.info('submitted');
+    <div class="modal fade" id="braintree">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Checkout</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="dropin-container"></div>                   
+                </div>
+                <div class="modal-footer">
+                    <button id="submit-button" class="btn btn-success btn-block btn-lg">Pay $99</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        // mock that the server redirects back to the same page
-                        location.reload();
-                    });
+    <script>
+        var button = document.querySelector('#submit-button');
+        braintree.dropin.create({
+            authorization: 'sandbox_97b8q46m_4vs88bsqqw7xd2rh',
+            container: '#dropin-container',
+            paypal: {
+                flow: 'checkout',
+                amount: '99.00',
+                currency: 'USD'
+            }
+        }, function (createErr, instance) {
+            if (createErr) {
+                // An error in the create call is likely due to
+                // incorrect configuration values or network issues.
+                // An appropriate error will be shown in the UI.
+                console.error(createErr);
+                return;
+            }
+
+            button.addEventListener('click', function () {
+                instance.requestPaymentMethod(function (requestPaymentMethodErr, payload) {
+                    if (requestPaymentMethodErr) {
+                        // No payment method is available.
+                        // An appropriate error will be shown in the UI.
+                        console.error('err:' + requestPaymentMethodErr);
+                        return;
+                    }
+
+                    // Submit payload.nonce to your server
+                    console.info('submitted');
+
+                    // mock that the server redirects back to the same page
+                    location.reload();
                 });
             });
-        </script>
-    </body>
+        });
+    </script>
+</body>
 </htmll>
