@@ -21,36 +21,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.js"></script>
     
     <div ng-app="testApp" ng-controller="testController as $ctrl">
-        <label>Enter Credit Card</label>
-        <input ng-model="$ctrl.creditCardNumber">
+        <label>Enter Line</label>
+        <input ng-model="$ctrl.line">
+         <label>Enter Amount Betting</label>
+        <input ng-model="$ctrl.bet">
         <br/>
-        <p ng-class="$ctrl.is_luhn_valid() ? 'text-success' : 'text-danger'"> Credit Card is {{$ctrl.is_luhn_valid() ? 'VALID' : 'INVALID'}}</p>
+        <p> Amount made {{$ctrl.amountMade()}}</p>
     </div>
     <script>
         var app = angular.module('testApp', []);
         app.controller('testController', function() {
            var $ctrl = this;
-           $ctrl.creditCardNumber = '';
+           $ctrl.line = 0;
+           $ctrl.bet = 0;
 
            var luhnChk = (function(arr) {
               return function(ccNum) {
-           var
-           len = ccNum.length,
-      bit = 1,
-      sum = 0,
-      val;
+           
 
-    while (len) {
-      val = parseInt(ccNum.charAt(--len), 10);
-      sum += (bit ^= 1) ? arr[val] : val;
-    }
-
-    return sum && sum % 10 === 0;
-  };
-}([0, 2, 4, 6, 8, 1, 3, 5, 7, 9]));
-
-$ctrl.is_luhn_valid = function(){
-  return luhnChk($ctrl.creditCardNumber);
+$ctrl.amoundMade = function(){
+  if(line === 0) return 0;
+  if (line > 0) return $ctrl.line/100*$ctrl.bet;  
+  if (line < 0) return 100/$ctrl.line*$ctrl.bet;
 }
         });
     </script>
