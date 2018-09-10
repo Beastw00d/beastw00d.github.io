@@ -40,7 +40,7 @@
 $ctrl.amountMade = function(){
   if($ctrl.line === 0) return 0;
   if ($ctrl.line > 0) return $ctrl.line/100*$ctrl.bet;  
-  if ($ctrl.line < 0) return 100/$ctrl.line*$ctrl.bet;
+  if ($ctrl.line < 0) return 100/$ctrl.line*$ctrl.bet*-1;
 }
         });
     </script>
