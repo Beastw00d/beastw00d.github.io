@@ -1,0 +1,173 @@
+<html ng-app="app" >
+
+<head>
+        
+                <title>Alta Line up Helper</title>
+                <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"  rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+    <script src="alta.js"></script>
+</head>
+
+<body>
+    <div ng-controller="lineup as vm" class="container">
+        <h2 class="control-label well text-center"> Line up</h2>
+        <div class="row" ng-class="{'has-success' : vm.line1Valid(),
+                               'has-error' : !vm.line1Valid()}">
+            <div class="col-xs-2" class="form-group">
+
+                <label class="control-label">Line 1:</label>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line1A) | orderBy:'points'"
+                        ng-model="vm.line1A">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line1B) | orderBy:'points'"
+                        ng-model="vm.line1B">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                {{vm.line1A.points + vm.line1B.points | number}}
+            </div>
+
+        </div>
+
+        <div class="row" ng-class="{'has-success' : vm.line2Valid(),
+                               'has-error' : !vm.line2Valid()}">
+            <div class="col-xs-2" class="form-group">
+
+                <label class="control-label">Line 2:</label>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line2A) | orderBy:'points'"
+                        ng-model="vm.line2A">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line2B) | orderBy:'points'"
+                        ng-model="vm.line2B">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                {{vm.line2A.points + vm.line2B.points | number}}
+            </div>
+
+        </div>
+
+        <div class="row" ng-class="{'has-success' : vm.line3Valid(),
+                               'has-error' : !vm.line3Valid()}">
+            <div class="col-xs-2" class="form-group">
+
+                <label class="control-label">Line 3:</label>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line3A) | orderBy:'points'"
+                        ng-model="vm.line3A">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line3B) | orderBy:'points'"
+                        ng-model="vm.line3B">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                {{vm.line3A.points + vm.line3B.points | number}}
+            </div>
+
+        </div>
+
+        <div class="row" ng-class="{'has-success' : vm.line4Valid(),
+                               'has-error' : !vm.line4Valid()}">
+            <div class="col-xs-2" class="form-group">
+
+                <label class="control-label">Line 4:</label>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line4A) | orderBy:'points'"
+                        ng-model="vm.line4A">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line4B) | orderBy:'points'"
+                        ng-model="vm.line4B">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                {{vm.line4A.points + vm.line4B.points | number}}
+            </div>
+
+        </div>
+
+        <div class="row" ng-class="{'has-success' : vm.line5Valid(),
+                               'has-error' : !vm.line5Valid()}">
+            <div class="col-xs-2" class="form-group">
+
+                <label class="control-label">Line 5:</label>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line5A) | orderBy:'points'"
+                        ng-model="vm.line5A">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="form-group">
+                    <select class="form-control" ng-options="(player.name + ' - ' + player.points) for player in vm.players | filter:vm.myFilter(vm.line5B) | orderBy:'points'"
+                        ng-model="vm.line5B">
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-2">
+                {{vm.line5A.points + vm.line5B.points | number}}
+            </div>
+        </div>
+
+        <div class="alert alert-danger" ng-if="!vm.linesValid()">Not Valid</div>
+        <div class="alert alert-success" ng-if="vm.linesValid()">Valid</div>
+
+        See the other lineups using these players.
+        <button type="button" class="btn btn-primary" ng-click="vm.export()" ng-disabled="!vm.linesValid()">
+            Export
+        </button>
+        (this may take a couple seconds)
+        <br>
+        <small>once excel opens press to expand the sheet: 'ctrl (cmd if on mac) + A', 'alt', 'h', 'o', 'i' </small>
+    </div>
+
+   
+
+
+</body>
+
+</html>
