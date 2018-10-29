@@ -231,36 +231,7 @@
         var valid = [];
         var selectedPlayers = vm.roster.slice(0,10)
         var results = permutator(selectedPlayers);
-        console.log('results ' + results.length)
-        var line1A, line1B,
-        line2A, line2B, line3A, line3B,
-        line4A, line4B, line5A, line5B = 0;
-        console.log(results)
-        for (var x = 0; x < results.length; x++) {        
-          var guys = results[x];
-          
-          line1A = guys[0];
-          line1B = guys[1];
-          line2A = guys[2];
-          line2B = guys[3];
-          line3A = guys[4];
-          line3B = guys[5];
-          line4A = guys[6];
-          line4B = guys[7];
-          line5A = guys[8];
-          line5B = guys[9];
-      
-            
-            valid.push({
-              line_1: line1A.name + ' - ' + line1B.name,
-              line_2: line2A.name + ' - ' + line2B.name,
-              line_3: line3A.name + ' - ' + line3B.name,
-              line_4: line4A.name + ' - ' + line4B.name,
-              line_5: line5A.name + ' - ' + line5B.name
-            });                 
-        }
-        
-        JSONToCSVConvertor(valid, 'Alta', true, true);
+        console.log('results ' + results.length)        
       }
 
       function sum(d1, d2) {
