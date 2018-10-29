@@ -138,47 +138,47 @@
       
       function init() {
         vm.roster = [{
-            name: 'CHANG, JAMES/CHAN',
+            name: 'A',
             points: 5.25
           },
           {
-            name: 'CHANTHAPHAENG, ALEXANDER',
+            name: 'B',
             points: 1.2
           },
           {
-            name: 'CHOE, SO',
+            name: 'C',
             points: 2.333
           },
           {
-            name: 'CHOI, DENNIS',
+            name: 'D',
             points: 4.167
           },
           {
-            name: 'CLARKE, CHRIS',
+            name: 'E',
             points: 4.5
           },
           {
-            name: 'CLAYTON, REGGIE',
+            name: 'F',
             points: 4
           },
           {
-            name: 'DORRIS, JOHN',
+            name: 'G',
             points: 3.5
           },
           {
-            name: 'EASTWOOD, CHRIS',
+            name: 'H',
             points: 1.1
           },
           {
-            name: 'ESPINOZA, RAYMUNDO',
+            name: 'I',
             points: 5.5
           },
           {
-            name: 'FERGUSSON, KIP',
+            name: 'J',
             points: 4.875
           },
           {
-            name: 'LI, YAN',
+            name: 'K',
             points: 5
           },
           {
