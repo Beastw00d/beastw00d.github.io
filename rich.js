@@ -252,10 +252,10 @@
       
             
             valid.push({
-              line_1: line1A.name + ' - ' + line1B.name
-              line_2: line2A.name + ' - ' + line2B.name
-              line_3: line3A.name + ' - ' + line3B.name
-              line_4: line4A.name + ' - ' + line4B.name
+              line_1: line1A.name + ' - ' + line1B.name,
+              line_2: line2A.name + ' - ' + line2B.name,
+              line_3: line3A.name + ' - ' + line3B.name,
+              line_4: line4A.name + ' - ' + line4B.name,
               line_5: line5A.name + ' - ' + line5B.name
             });                 
         }
