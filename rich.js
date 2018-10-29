@@ -239,6 +239,7 @@
       }
 
       function permutator(inputArr) {
+        var count = 0;
         var results = [];
         var indexes = [];
         function permute(arr, memo) {
@@ -251,7 +252,7 @@
               var index = createIndex(result);    
               if(!exists(index, indexes))     
               {
-                  results.push(result); 
+                  console.log(count++)
                   indexes.push(index);                    
               }          
             }                                                                          
