@@ -138,84 +138,84 @@
       
       function init() {
         vm.roster = [{
-            name: 'CHANG, JAMES/CHAN',
-            points: 5.25
+            name: 'Antista, Alexis',
+            points: 2.750
           },
           {
-            name: 'CHANTHAPHAENG, ALEXANDER',
-            points: 1.2
+            name: 'Phoebe, Chiem',
+            points: 3.125
           },
           {
-            name: 'CHOE, SO',
+            name: 'Laura, Cunningham',
+            points: 5.167
+          },
+          {
+            name: 'Jayme, Danielson',
+            points: 4.000
+          },
+          {
+            name: 'Dusty, Davis',
+            points: 1.875
+          },
+          {
+            name: 'Dlabik, Onyx',
+            points: 4.5
+          },
+          {
+            name: 'Eastwood, Chris',
+            points: 1.625
+          },
+          {
+            name: 'Gochnauer, Christian',
+            points: 4.0
+          },
+          {
+            name: 'Hollingsworth, Rebekah',
+            points: 4.375
+          },
+          {
+            name: 'Huynh, Harrison',
+            points: 3.750
+          },
+          {
+            name: 'Inderrieden, Jake',
+            points: 5.167
+          },
+          {
+            name: 'Johnston, Jordan',
+            points: 1.167
+          },
+          {
+            name: 'Kumming, Andy',
+            points: 2.667
+          },
+          {
+            name: 'Kumming, Megan',
+            points: 3.333
+          },
+          {
+            name: 'Lloyd, Holly',
+            points: 2.375
+          },
+          {
+            name: 'Mize-Johnston, Sue',
+            points: 1.5
+          },
+          {
+            name: 'Mlaver, Eli',
             points: 2.333
           },
           {
-            name: 'CHOI, DENNIS',
-            points: 4.167
-          },
-          {
-            name: 'CLARKE, CHRIS',
-            points: 4.5
-          },
-          {
-            name: 'CLAYTON, REGGIE',
-            points: 4
-          },
-          {
-            name: 'DORRIS, JOHN',
-            points: 3.5
-          },
-          {
-            name: 'EASTWOOD, CHRIS',
-            points: 1.1
-          },
-          {
-            name: 'ESPINOZA, RAYMUNDO',
+            name: 'Shen, Kai',
             points: 5.5
           },
           {
-            name: 'FERGUSSON, KIP',
-            points: 4.875
+            name: 'Surls, Jonathan',
+            points: 3.125
           },
           {
-            name: 'LI, YAN',
-            points: 5
-          },
-          {
-            name: 'LY, BRADON',
-            points: 2.5
-          },
-          {
-            name: 'MA, PHUC',
-            points: 2.2
-          },
-          {
-            name: 'NGUYEN, BEN',
-            points: 4.333
-          },
-          {
-            name: 'PANARO, JIM',
+            name: 'Tran, Hai',
             points: 4.5
-          },
-          {
-            name: 'SANDERS, LUKE',
-            points: 3.25
-          },
-          {
-            name: 'SOH, YOU SEUNG',
-            points: 5.25
-          },
-          {
-            name: 'SURLS, JONATHAN',
-            points: 2.4
-          },
-          {
-            name: 'TRAN, HAI',
-            points: 1.917
-          },
-          {
-            name: 'WEXEL, PETER',
-            points: 3.5
           }
         ];
 
