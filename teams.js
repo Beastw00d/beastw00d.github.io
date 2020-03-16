@@ -5,7 +5,7 @@ angular.module('app').controller("teams", teams);
 function teams () {
   var vm = this;
 
-  vm.players = ['Chris', 'Will', 'BP', 'JP', 'Ryan', 'Spencer']
+  vm.players = ['BP', 'Chris', 'JP', 'Ryan', 'Spencer', 'Will']
   vm.newPlayer = '';
   vm.teamsArray = [];
 
