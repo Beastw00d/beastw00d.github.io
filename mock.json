@@ -1,82 +1,76 @@
 {
-    "openapi": "3.0.1",
-    "info": {
-        "title": "mock",
-        "description": "",
-        "version": "1.0"
-    },
-    "servers": [
-        {
-            "url": "https://ar-dev-chargesapi.azure-api.net/mock"
-        }
-    ],
-    "paths": {
-        "/contract": {
-            "post": {
-                "summary": "add contract",
-                "description": "add contract",
-                "operationId": "add-contract",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Mock Order"
-                            },
-                            "example": {
-                                "accountId": "123",
-                                "total": "2020-01-02T00:00:00.0000000+00:00",
-                                "values": {}
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "200": {
-                        "description": ""
-                    },
-                    "201": {
-                        "description": ""
-                    }
-                }
-            }
-        }
-    },
-    "components": {
-        "schemas": {
-            "Mock Order": {
-                "type": "object",
-                "properties": {
-                    "accountId": {
-                        "type": "string"
-                    },
-                    "total": {
-                        "type": "string"
-                    },
-                    "values": {
-                        "type": "object"
-                    }
-                }
-            }
+  "info": {
+    "title": "mock",
+    "description": "",
+    "version": "1.0"
+  },
+  "paths": {
+    "/contract": {
+      "post": {
+        "summary": "add contract",
+        "description": "add contract",
+        "operationId": "add-contract",
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "201": {
+            "description": ""
+          }
         },
-        "securitySchemes": {
-            "apiKeyHeader": {
-                "type": "apiKey",
-                "name": "Ocp-Apim-Subscription-Key",
-                "in": "header"
-            },
-            "apiKeyQuery": {
-                "type": "apiKey",
-                "name": "subscription-key",
-                "in": "query"
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "$ref": "#/definitions/Mock Order"
             }
-        }
+          }
+        ]
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
     },
-    "security": [
-        {
-            "apiKeyHeader": []
+    {
+      "apiKeyQuery": []
+    }
+  ],
+  "swagger": "2.0",
+  "schemes": [
+    "https"
+  ],
+  "host": "ar-dev-chargesapi.azure-api.net",
+  "basePath": "/mock",
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Ocp-Apim-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    }
+  },
+  "definitions": {
+    "Mock Order": {
+      "type": "object",
+      "properties": {
+        "accountId": {
+          "type": "string"
         },
-        {
-            "apiKeyQuery": []
+        "total": {
+          "type": "string"
+        },
+        "values": {
+          "type": "object"
         }
-    ]
+      }
+    }
+  },
+  "x-components": {}
 }
