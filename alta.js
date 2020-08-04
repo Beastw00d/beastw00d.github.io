@@ -138,84 +138,84 @@
       
       function init() {
         vm.roster = [{
-            name: 'Antista, Alexis',
-            points: 2.750
-          },
-          {
-            name: 'Phoebe, Chiem',
-            points: 3.125
-          },
-          {
-            name: 'Laura, Cunningham',
-            points: 5.167
-          },
-          {
-            name: 'Jayme, Danielson',
-            points: 4.000
-          },
-          {
-            name: 'Dusty, Davis',
-            points: 1.875
-          },
-          {
-            name: 'Dlabik, Onyx',
-            points: 4.5
-          },
-          {
-            name: 'Eastwood, Chris',
-            points: 1.625
-          },
-          {
-            name: 'Gochnauer, Christian',
-            points: 4.0
-          },
-          {
-            name: 'Hollingsworth, Rebekah',
-            points: 4.375
-          },
-          {
-            name: 'Huynh, Harrison',
-            points: 3.750
-          },
-          {
-            name: 'Inderrieden, Jake',
-            points: 5.167
-          },
-          {
-            name: 'Johnston, Jordan',
+            name: 'Carvajal, Glauka',
             points: 1.167
           },
           {
-            name: 'Kumming, Andy',
-            points: 2.667
+            name: 'Phoebe, Chiem',
+            points: 5.000
           },
           {
-            name: 'Kumming, Megan',
-            points: 3.333
-          },
-          {
-            name: 'Lloyd, Holly',
-            points: 2.375
-          },
-          {
-            name: 'Mize-Johnston, Sue',
-            points: 1.5
-          },
-          {
-            name: 'Mlaver, Eli',
-            points: 2.333
-          },
-          {
-            name: 'Shen, Kai',
-            points: 5.5
-          },
-          {
-            name: 'Surls, Jonathan',
+            name: 'Colonnese, Matthew',
             points: 3.125
           },
           {
+            name: 'Cook, Thomas',
+            points: 2.500
+          },
+          {
+            name: 'Cordover, Andrea',
+            points: 2.167
+          },         
+          {
+            name: 'Jayme, Danielson',
+            points: 4.833
+          },                 
+          {
+            name: 'Dlabik, Onyx',
+            points: 5.25
+          },
+          {
+            name: 'Gochnauer, Christian',
+            points: 2.750
+          },
+          {
+            name: 'Grimberg, Ivona',
+            points: 1.250
+          },
+          {
+            name: 'Guaglianone, Sofia',
+            points: 2.833
+          },
+          {
+            name: 'Huynh, Harrison',
+            points: 4.500
+          },
+          {
+            name: 'Kumming, Andy',
+            points: 1.750
+          },
+          {
+            name: 'Kumming, Megan',
+            points: 4.125
+          },
+          {
+            name: 'Lane, Brandon',
+            points: 1.250
+          },
+          {
+            name: 'Lloyd, Holly',
+            points: 2.167
+          },                     
+          {
+            name: 'Mlaver, Eli',
+            points: 4.500
+          },
+          {
+            name: 'Puerta, Maria',
+            points: 3.125
+          },
+          {
+            name: 'Santaloci, Michael',
+            points: 4.750
+          },
+          {
+            name: 'Surls, Jonathan',
+            points: 4.250
+          },
+          {
             name: 'Tran, Hai',
-            points: 4.5
+            points: 5.250
           }
         ];
 
