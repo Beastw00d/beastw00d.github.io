@@ -16,27 +16,22 @@
        width: 60%;
      }
      .positive {
-         background-color: red;
+         background-color:lightcoral;
      }
      .negative {
-         background-color: green;
+         background-color:lightgreen;
      }
      .even {
-        background-color: grey;
+        background-color: lightgray;
      }
      .positive-total {
-         background-color: lightcoral;
+         background-color: rgb(243, 182, 182);
      }
      .negative-total {
-         background-color: lightgreen;
+         background-color:lightgreen;
      }
-     .positive-text {
-        color: red;
-     }
-     .negative-text {
-        color: green;
-     }
-     .hide
+     
+     
 
 </style>
 
@@ -47,17 +42,17 @@
                 <div class="panel panel-default col-md-4" ng-repeat="player in vm.players | orderBy:'total'" ng-class="player.total > 0 ? 'panel-danger': (player.total === 0 ? '':'panel-success')" >
                     <div class="panel-heading">{{$index+1}}: {{player.name}} : {{player.total}}  </div>
                     <div class="panel-body">
-                        <table class="table table-striped table-condensed" style="font-size: 16px;">
+                        <table class="table table-condensed" style="font-size: 16px;">
                             <tr ng-repeat="pick in player.picks">
                                 <td>{{pick.name}}</td>
                                 <td ng-repeat="round in pick.rounds track by $index" ng-class="!round.done ? '' : (round.score > 0 ? 'positive': (round.score === 0 ? 'even':'negative'))"><span ng-if="round.done">{{round.score}}</span></td>
                             </tr>
                             <tr>
                                 <td><strong>totals:</strong></td>
-                                <td ng-class="player.subtotals[0] > 0 ? 'positive-total': (player.subtotals[0] === 0 ? '':'negative-total')">{{player.subtotals[0]}}</td>        
-                                <td ng-class="player.subtotals[1] > 0 ? 'positive-total': (player.subtotals[1] === 0 ? '':'negative-total')">{{player.subtotals[1]}}</td>        
-                                <td ng-class="player.subtotals[2] > 0 ? 'positive-total': (player.subtotals[2] === 0 ? '':'negative-total')">{{player.subtotals[2]}}</td>                   
-                                <td ng-class="player.subtotals[3] > 0 ? 'positive-total': (player.subtotals[3] === 0 ? '':'negative-total')">{{player.subtotals[3]}}</td>           
+                                <td ng-class="player.subtotals[0] > 0 ? 'positive-total': (player.subtotals[0] === 0 ? '':'negative-total')"><strong>{{player.subtotals[0]}}</strong></td>        
+                                <td ng-class="player.subtotals[1] > 0 ? 'positive-total': (player.subtotals[1] === 0 ? '':'negative-total')"><strong>{{player.subtotals[1]}}</strong></td>       
+                                <td ng-class="player.subtotals[2] > 0 ? 'positive-total': (player.subtotals[2] === 0 ? '':'negative-total')"><strong>{{player.subtotals[2]}}</strong></td>                        
+                                <td ng-class="player.subtotals[3] > 0 ? 'positive-total': (player.subtotals[3] === 0 ? '':'negative-total')"><strong>{{player.subtotals[3]}}</strong></td>              
                             </tr>
                         </table>
                     </div>            
