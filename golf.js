@@ -11,7 +11,7 @@ function golf() {
                     id: 1,
                     name: 'Justin Thomas',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: -6, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -30,16 +30,16 @@ function golf() {
                     id: 3,
                     name: 'Patrick Cantlay',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: -2, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
                 },
                 {
                     id: 4,
-                    name: 'Matthew Wolf',
+                    name: 'Matthew Wolff',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: -2, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -48,7 +48,7 @@ function golf() {
                     id: 5,
                     name: 'Francesco Molinari',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: 0, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -59,9 +59,9 @@ function golf() {
             name: 'Chris',
             picks: [{
                     id: 6,
-                    name: 'Rory McElroy',
+                    name: 'Rory Mcilroy',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: 3, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -128,7 +128,7 @@ function golf() {
                     id: 13,
                     name: 'Tommy Fleetwood',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: -1, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -146,7 +146,7 @@ function golf() {
                     id: 15,
                     name: 'Cameron Champ',
                     rounds: [
-                        {score: 1, done: true},
+                        {score: -4, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -159,7 +159,7 @@ function golf() {
                     id: 16,
                     name: 'Dustin Johnson',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: -7, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -168,7 +168,7 @@ function golf() {
                     id: 17,
                     name: 'Bubba Watson',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: 2, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -195,7 +195,7 @@ function golf() {
                     id: 20,
                     name: 'Tyrrell Hatton',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: 1, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -217,7 +217,7 @@ function golf() {
                     id: 22,
                     name: 'Brooks Koepka',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: -2, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
@@ -226,7 +226,7 @@ function golf() {
                     id: 23,
                     name: 'Rickie Fowler',
                     rounds: [
-                        {score: 0, done: false},
+                        {score: -2, done: true},
                         {score: 0, done: false},
                         {score: 0, done: false},
                         {score: 0, done: false}]
